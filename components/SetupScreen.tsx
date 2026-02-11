@@ -72,11 +72,20 @@ const SetupScreen: React.FC<SetupScreenProps> = ({ onStartGame, initialPlayerNam
 
   return (
     <div className="max-w-md mx-auto p-6 space-y-8 animate-fade-in">
-      <div className="text-center space-y-2">
-        <h1 className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">
+      {/* Logo Header */}
+      <div className="flex flex-col items-center justify-center pt-4 pb-2">
+        <div className="flex items-start relative">
+          <h1 className="text-7xl font-black text-white tracking-tighter leading-none select-none">
+            IES
+          </h1>
+          <div className="w-3 h-3 bg-indigo-500 mt-2 ml-1"></div>
+        </div>
+        
+        <h2 className="text-2xl font-black tracking-[0.4em] text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400 mt-1 ml-1 select-none">
           IMPOSTER
-        </h1>
-        <p className="text-slate-400">Trust no one. Hint carefully.</p>
+        </h2>
+        
+        <p className="text-slate-400 text-sm mt-4">Trust no one. Hint carefully.</p>
       </div>
 
       <div className="space-y-4">
@@ -94,7 +103,7 @@ const SetupScreen: React.FC<SetupScreenProps> = ({ onStartGame, initialPlayerNam
           )}
         </div>
         
-        <div className="space-y-3 max-h-60 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-slate-700">
+        <div className="space-y-3 max-h-60 overflow-y-auto p-1 pr-2 scrollbar-thin scrollbar-thumb-slate-700">
           {names.map((name, index) => (
             <div key={index} className="flex gap-2">
               <Input

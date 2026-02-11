@@ -1,0 +1,5 @@
+{
+  "name": "Imposter",
+  "description": "A social deduction party game where players must identify the imposters among them while hiding their own identity.",
+  "requestFramePermissions": []
+}
